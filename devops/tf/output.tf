@@ -3,5 +3,5 @@ output "webapp_first_deploy" {
 }
 
 output "webapps" {
-    value = [for host in linode_instance.cfe-pyapp.*: "${host.label} : ${host.ip_address}"]
+    value = [for host in linode_instance.cfe-pyapp.*: "${host.label} : ${host.ip_address} - ${var.region}"]
 }
