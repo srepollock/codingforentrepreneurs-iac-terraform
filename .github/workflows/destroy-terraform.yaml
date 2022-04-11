@@ -37,5 +37,5 @@ jobs:
       - name: Terraform Validate 
         run: terraform -chdir=./devops/tf validate -no-color
       - name: Terraform Apply Changes 
-        run: terraform -chdir=./devops/tf destroy
+        run: terraform -chdir=./devops/tf destroy --auto-approve
         
